@@ -55,5 +55,8 @@
     <string name="HermesLine2C">Whats our heading Captain?</string>
     <string name="HermesLine2D">Where we off to next?</string>
     <string name="LoadingText">LOADING&#8230;</string>
+    <string name="ResultsFetchText">FETCHING RESULTS&#8230;</string>
+    <string name="DestinationQueryTextPH">City Name</string>
+
 
 </resources>
