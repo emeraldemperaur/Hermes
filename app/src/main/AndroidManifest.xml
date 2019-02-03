@@ -84,10 +84,26 @@
             </intent-filter>
 
             <meta-data
+                android:resource="@xml/searchable"
                 android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+                android:value=".CaduceusLoaderActivity" />
+
+
         </activity>
-        <activity android:name=".CaduceusLoaderActivity"></activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:theme="@style/CaduceusLoaderTheme"
+            android:name=".CaduceusLoaderActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+
+
+
+        </activity>
     </application>
 
 </manifest>

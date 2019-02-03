@@ -3,6 +3,7 @@ package iot.empiaurhouse.hermes;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -88,12 +89,50 @@ public class CaduceusActivity extends Activity {
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView HermesSearchView = findViewById(R.id.HermesSearch);
         HermesSearchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        HermesQueryInit();
+
+
+
+
+
+
+
+
 
 
 
 
 
     }
+
+
+
+
+    public void HermesQueryInit(){
+        Intent intent = getIntent();
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String caduceus_query = intent.getStringExtra(SearchManager.QUERY);
+            SharedPreferences HermesIO = getApplicationContext().getSharedPreferences("HERMES_PREFERENCES",0);
+            SharedPreferences.Editor HermesIOeditor = HermesIO.edit();
+            HermesIOeditor.putString("HermesQuery", caduceus_query);
+            HermesIOeditor.apply();
+            CaduceusLoaderIntent();
+
+
+        }
+
+    }
+
+
+
+
+    public void CaduceusLoaderIntent(){
+
+        Intent caduceusloaderintent = new Intent(this, CaduceusLoaderActivity.class);
+        startActivity(caduceusloaderintent);
+
+    }
+
 
 
 
