@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="iot.empiaurhouse.hermes.WelcomeActivity"
+    android:id="@+id/welcome_activity"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/banner_container"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:background="@drawable/hermes_formbckgrnd"
+
+        >
+
+
+        <TextView
+            android:id="@+id/greeting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="165dp"
+            android:fontFamily="@font/thasadithregular"
+            android:textColor="@color/white"
+            android:textSize="33sp"
+            android:visibility="visible"
+
+            />
+
+
+        <ImageView
+            android:background="@drawable/hermes_minimallogo"
+            android:id="@+id/banner_img"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginBottom="93dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="29dp"
+            android:visibility="visible"
+            android:contentDescription="@string/bwlogo_txt" />
+
+
+
+        <TextView
+            android:id="@+id/banner_locationtexty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="@string/form_title_subtext"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:visibility="visible"
+
+            />
+
+        <TextView
+            android:id="@+id/banner_locationtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="@string/form_title_subtextb"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:visibility="visible"
+
+            />
+
+
+
+        <Button
+            android:onClick="SIGNIN_BTN"
+            android:layout_marginTop="105dp"
+            android:padding="2dp"
+            android:background="@drawable/buttonborder"
+            android:id="@+id/signin_button"
+            android:text="@string/SIGNIN"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_height="wrap_content" />
+
+
+
+    </FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/banner_locationtextz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/form_lower_text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="29sp"
+        android:visibility="visible"
+
+        />
+
+    <TextView
+        android:id="@+id/banner_locationtextx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="-10dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/form_lower_textb"
+        android:textColor="@color/colorPrimary"
+        android:textSize="29sp"
+        android:visibility="visible"
+
+        />
+
+
+    <TextView
+        android:id="@+id/banner_locationtextw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/form_lower_textc"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="visible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+    <TextView
+        android:id="@+id/banner_locationtextv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/montserratregular"
+        android:text="@string/ShowcaseURL"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:visibility="visible"
+        android:onClick="EXPLORE_BTN"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+    <TextView
+        android:id="@+id/banner_locationtextu"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingStart="9dp"
+        android:paddingEnd="7dp"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/thasadithbold"
+        android:text="@string/IntroSlogan"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:visibility="visible"
+
+        />
+
+
+    <TextView
+        android:id="@+id/banner_locationtextt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithbold"
+        android:text="@string/AbodeTitle"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:visibility="visible"
+
+        />
+
+
+    <ImageView
+        android:background="@drawable/abodeiconb"
+        android:id="@+id/banner_imgb"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/bwlogo_txt" />
+
+
+    <TextView
+        android:id="@+id/banner_locationtexts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/AbodeText"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+
+    <TextView
+        android:id="@+id/banner_locationtexttr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithbold"
+        android:text="@string/FoodTitle"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:visibility="visible"
+
+        />
+
+
+    <ImageView
+        android:background="@drawable/foodicon"
+        android:id="@+id/banner_imgc"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/bwlogo_txt" />
+
+
+    <TextView
+        android:id="@+id/banner_locationtextq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/FoodText"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+
+    <TextView
+        android:id="@+id/banner_locationtexttp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithbold"
+        android:text="@string/EntertainmentTitle"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:visibility="visible"
+
+        />
+
+
+    <ImageView
+        android:background="@drawable/entertainmenticon"
+        android:id="@+id/banner_imgd"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/bwlogo_txt" />
+
+
+    <TextView
+        android:id="@+id/banner_locationtextp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/EntertainmentText"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible"
+
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+
+
+    <TextView
+        android:id="@+id/banner_locationtextto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithbold"
+        android:text="@string/EdificationTitle"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:visibility="visible"
+
+        />
+
+
+    <ImageView
+        android:background="@drawable/edificationicon"
+        android:id="@+id/banner_imge"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/bwlogo_txt" />
+
+
+    <TextView
+        android:id="@+id/banner_locationtextn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/EdificationText"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+    <TextView
+        android:id="@+id/banner_locationtexttm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithbold"
+        android:text="@string/PopularSpotsTitle"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:visibility="visible"
+
+        />
+
+
+    <ImageView
+        android:background="@drawable/popularspotsicon"
+        android:id="@+id/banner_imgf"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/bwlogo_txt" />
+
+
+    <TextView
+        android:id="@+id/banner_locationtextl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/PopularSpotsText"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+
+    <TextView
+        android:id="@+id/banner_locationtexttk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/thasadithbold"
+        android:text="@string/POITitle"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:visibility="visible"
+
+        />
+
+
+    <ImageView
+        android:background="@drawable/poiicon"
+        android:id="@+id/banner_imgg"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:visibility="visible"
+        android:contentDescription="@string/bwlogo_txt" />
+
+
+    <TextView
+        android:id="@+id/banner_locationtextj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginStart="0dp"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/POIText"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:visibility="visible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+    <TextView
+        android:id="@+id/banner_locationtexti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="0dp"
+        android:text="@string/EHCopyright"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:visibility="visible"
+
+        />
+
+
+</LinearLayout>
+
+
+
+
+
+</ScrollView>

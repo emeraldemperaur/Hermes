@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "146248393017",
+    "firebase_url": "https://hermes-b5c8c.firebaseio.com",
+    "project_id": "hermes-b5c8c",
+    "storage_bucket": "hermes-b5c8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146248393017:android:fcd1ed4ca08aa92a",
+        "android_client_info": {
+          "package_name": "iot.empiaurhouse.hermes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146248393017-mmmo3m2nk3uaphhidutjk23fgenbrcie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "iot.empiaurhouse.hermes",
+            "certificate_hash": "8011c4ec2bba59c4904e3f48c04882baef1e1f40"
+          }
+        },
+        {
+          "client_id": "146248393017-q95rjfuucpkhjksa2k5lbt73sh6qcj7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwQxjnGQwYydQDeCPSZaklpT7nANYByQQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146248393017-q95rjfuucpkhjksa2k5lbt73sh6qcj7p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
