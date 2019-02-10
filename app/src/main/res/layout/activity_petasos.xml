@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iot.empiaurhouse.hermes.PetasosActivity"
+    android:id="@+id/petasos_activity"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <TextView
+
+        android:id="@+id/QueryCityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingStart="12dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="5dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/thasadithregular"
+        android:text="@string/DestinationQueryTextPH"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:visibility="visible"
+
+        />
+
+    <FrameLayout
+        android:id="@+id/overview_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+
+
+        <ImageView
+            android:background="@drawable/florencedome"
+            android:id="@+id/banner_img"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:contentDescription="@string/bwlogo_txt" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

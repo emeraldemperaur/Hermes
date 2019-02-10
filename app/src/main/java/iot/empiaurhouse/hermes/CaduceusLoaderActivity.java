@@ -1,6 +1,7 @@
 package iot.empiaurhouse.hermes;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -13,12 +14,21 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 
 public class CaduceusLoaderActivity extends Activity {
 
     ImageView HermesInitLogo;
     TypeWriterTextView QueryProgressText;
     TextView QueryCityText;
+
+
+    InterstitialAd mInterstitialAd;
+    private InterstitialAd Hermesinterstitial;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +43,19 @@ public class CaduceusLoaderActivity extends Activity {
         SharedPreferences HermesIO = getApplicationContext().getSharedPreferences("HERMES_PREFERENCES",0);
         String Query_City = HermesIO.getString("HermesQuery", "City Name");
         QueryCityText.setText(Query_City);
+        final Animation fader = AnimationUtils.loadAnimation(this, R.anim.faderfx);
+        QueryCityText.startAnimation(fader);
 
 
         //HermesInitLogo.setVisibility(View.INVISIBLE);
         final TypeWriterTextView QueryProgressText = findViewById(R.id.query_progress_text);
         QueryProgressText.setVisibility(View.INVISIBLE);
         HermesInitLogo.setVisibility(View.INVISIBLE);
-        LoaderImgFX();
+
 
         Runnable _HermesQueryLoaderRunnable = new Runnable() {
             public void run() {
-                HermesInitLogo.setVisibility(View.VISIBLE);
+
                 QueryProgressText.setVisibility(View.VISIBLE);
                 LoaderImgFX();
                 LoaderTextFX();
@@ -53,9 +65,19 @@ public class CaduceusLoaderActivity extends Activity {
             }
         };
         Handler _HermesQueryHandler = new Handler();
-        _HermesQueryHandler.postDelayed(_HermesQueryLoaderRunnable, 1222);
+        _HermesQueryHandler.postDelayed(_HermesQueryLoaderRunnable, 2200);
 
 
+
+        Runnable _PetasosIntentRunnable = new Runnable() {
+            public void run() {
+
+                GoogleAdsInit();
+
+            }
+        };
+        Handler _PetasosIntentHandler = new Handler();
+        _PetasosIntentHandler.postDelayed(_PetasosIntentRunnable, 5555);
 
 
 
@@ -64,11 +86,78 @@ public class CaduceusLoaderActivity extends Activity {
 
 
 
+    public void GoogleAdsInit(){
+
+        AdRequest Hermes_adRequest = new AdRequest.Builder().build();
+        Hermesinterstitial = new InterstitialAd(CaduceusLoaderActivity.this);
+        Hermesinterstitial.setAdUnitId(getString(R.string.test_interstitial_ad_unit_id));
+        Hermesinterstitial.loadAd(Hermes_adRequest);
+
+        Hermesinterstitial.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+
+                displayInterstitial();
+            }
+
+            public void onAdClosed() {
+
+                PetasosIntent();
+
+            }
+
+            public void onAdFailedToLoad(int errorCode) {
+
+
+
+            }
+
+        });
+
+
+    }
+
+
+
+
+
+    public void PetasosIntent(){
+
+
+        Intent Petasosintent = new Intent(this, PetasosActivity.class);
+        startActivity(Petasosintent);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void displayInterstitial() {
+// If Ads are loaded, show Interstitial else show nothing.
+        if (Hermesinterstitial.isLoaded()) {
+            Hermesinterstitial.show();
+        }
+
+    }
+
+
+
+
 
     public void LoaderImgFX(){
 
-        final Animation Blinker = AnimationUtils.loadAnimation(this, R.anim.blinker);
-        HermesInitLogo.startAnimation(Blinker);
+        final Animation pusher = AnimationUtils.loadAnimation(this, R.anim.push_up_in);
+        HermesInitLogo.startAnimation(pusher);
+        HermesInitLogo.setVisibility(View.VISIBLE);
+
 
 
 
@@ -93,7 +182,7 @@ public class CaduceusLoaderActivity extends Activity {
     protected void onResume()
     {
         super.onResume();
-        LoaderImgFX();
+
 
     }
 
