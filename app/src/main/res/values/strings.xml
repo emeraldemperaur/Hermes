@@ -4,7 +4,7 @@
     <string name="bwlogo_txt">EH Black White Logo</string>
     <string name="wblogo_txt">EH White Black Logo</string>
     <string name="loader_text">LOADING&#8230;</string>
-    <string name="title_subtext">Virtual Travel Cicerone</string>
+    <string name="title_subtext">Virtual Travel Guide</string>
     <string name="form_title_subtext">Meet Your</string>
     <string name="form_title_subtextb">Digital Travel Assistant</string>
     <string name="form_lower_text">Learn more about any</string>
@@ -44,10 +44,10 @@
     <string name="Hello">Hello</string>
     <string name="FullName">Full Name</string>
     <string name="SearchText">SEARCH AND DISCOVER YOUR NEXT DESTINATION</string>
-    <string name="DBSearchText">SAY OR ENTER YOUR DESTINATION</string>
+    <string name="DBSearchText">PLEASE ENTER YOUR DESTINATION</string>
     <string name="search_hint">Where to?</string>
     <string name="VoiceEnabled">VOICE ENABLED</string>
-    <string name="VTCText">A VIRTUAL TRAVEL CICERONE</string>
+    <string name="VTCText">A VIRTUAL TRAVEL GUIDE</string>
     <string name="VTCTextB">A Virtual Travel Cicerone</string>
     <string name="HermesLine1">My Cognomen is Hermes</string>
     <string name="HermesLine2A">Where would you like to go?</string>
@@ -59,9 +59,21 @@
     <string name="DestinationQueryTextPH">City Name</string>
     <string name="test_interstitial_ad_unit_id">ca-app-pub-3940256099942544/8691691433</string>
     <string name="interstitial_ad_unit_id">ca-app-pub-1184437456390972/7825110783</string>
-
-
-
+    <string name="localtime_label">Locale Time: 12:00PM</string>
+    <string name="localcurrency_label">Local Currency: Euro (€)</string>
+    <string name="localweather_label">Current Weather: - 1°C</string>
+    <string name="localcountrycode_label">ITU Country Code: +39</string>
+    <string name="locationdistance_label">Distance from Current Location</string>
+    <string name="divider">|</string>
+    <string name="petasos_speechsim">Take a look at what I found</string>
+    <string name="places_text">Places to Stay</string>
+    <string name="eatplaces_text">Places to Eat</string>
+    <string name="chillplaces_text">Places to Chill</string>
+    <string name="populartplaces_text">Places that are Popular</string>
+    <string name="interestplaces_text">Places of Interest</string>
+    <string name="more_btn">More</string>
+    <string name="sample_title">Transcorp Hilton</string>
+    <string name="NQText">Would you like to query a new destination?</string>
 
 
 </resources>

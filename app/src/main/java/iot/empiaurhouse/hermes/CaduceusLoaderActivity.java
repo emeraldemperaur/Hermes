@@ -107,6 +107,8 @@ public class CaduceusLoaderActivity extends Activity {
 
             public void onAdFailedToLoad(int errorCode) {
 
+                PetasosIntent();
+
 
 
             }

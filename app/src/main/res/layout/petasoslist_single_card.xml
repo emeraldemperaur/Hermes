@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/hotelitemph"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/sample_title"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/montserratthin"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
