@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="iot.empiaurhouse.hermes.PetasosDetailActivity"
+    android:id="@+id/petasos_detail_activity"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/pd_banner_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            android:padding="6dp"
+            app:cardUseCompatPadding="true"
+            >
+
+
+        <ImageView
+            android:id="@+id/pd_banner_img"
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:src="@drawable/hotelitemph"
+            android:contentDescription="@string/bwlogo_txt" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:id="@+id/pd_back_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="start"
+            android:visibility="visible"
+            android:src="@drawable/ic_arrow_back_white"
+            android:onClick="BCK_BTN"
+            android:contentDescription="@string/bwlogo_txt" />
+
+
+
+        <iot.empiaurhouse.hermes.TypeWriterTextView
+            android:id="@+id/pdbanner_itemtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="@string/sample_title"
+            android:textColor="@color/white"
+            android:textSize="33sp"
+            android:visibility="visible"
+
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/synopsis_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:text="@string/synopsis"
+        android:textColor="@color/colorPrimary"
+        android:textSize="19sp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/montserratmedium"
+
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+
+    <TextView
+        android:padding="6dp"
+        android:id="@+id/synopsis_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserratlight"
+        android:justificationMode="inter_word"
+        android:text="@string/synopsis_text"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="visible"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_gravity="center"
+        android:background="@color/viewborder"/>
+
+
+    <TextView
+        android:id="@+id/contact_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:text="@string/contact_information"
+        android:textColor="@color/colorPrimary"
+        android:textSize="19sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/montserratmedium"
+
+        />
+
+    <TextView
+        android:id="@+id/website_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:text="@string/website_ph"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/montserratthin"
+
+        />
+
+
+    <TextView
+        android:id="@+id/telephone_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:text="@string/telephone_ph"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/montserratthin"
+
+        />
+
+
+    <TextView
+        android:id="@+id/email_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:text="@string/email_ph"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/montserratthin"
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,6 +1,8 @@
 package iot.empiaurhouse.hermes;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -30,6 +32,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
@@ -45,6 +48,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.VisibleForTesting;
 import androidx.core.content.ContextCompat;
 
 import static com.facebook.GraphRequest.TAG;
@@ -53,6 +57,9 @@ import static com.facebook.GraphRequest.TAG;
 public class SignInActivity extends Activity implements
         View.OnClickListener {
 
+
+    @VisibleForTesting
+    public ProgressDialog mProgressDialog;
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
@@ -138,6 +145,8 @@ public class SignInActivity extends Activity implements
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
 
+        showProgressDialog();
+
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
@@ -160,10 +169,12 @@ public class SignInActivity extends Activity implements
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
+                            Snackbar.make(findViewById(R.id.signin_activity), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
 
                         }
 
 
+                        hideProgressDialog();
                     }
                 });
     }
@@ -200,6 +211,7 @@ public class SignInActivity extends Activity implements
 
     private void handleFacebookAccessToken(AccessToken token) {
         Log.d(TAG, "handleFacebookAccessToken:" + token);
+        showProgressDialog();
 
         AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
         mAuth.signInWithCredential(credential)
@@ -230,7 +242,7 @@ public class SignInActivity extends Activity implements
 
                         }
 
-
+                        hideProgressDialog();
                         // ...
                     }
                 });
@@ -292,6 +304,26 @@ public class SignInActivity extends Activity implements
 
 
 
+    }
+
+
+
+    public void showProgressDialog() {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog.setMessage(getString(R.string.googlesignin_loading));
+            mProgressDialog.setIndeterminate(true);
+        }
+
+        mProgressDialog.show();
+    }
+
+
+
+    public void hideProgressDialog() {
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.dismiss();
+        }
     }
 
 
@@ -388,12 +420,17 @@ public class SignInActivity extends Activity implements
     @Override
     public void onStart() {
         super.onStart();
-        FirebaseApp.initializeApp(this);
+
     }
 
 
 
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        hideProgressDialog();
+    }
 
 
 

@@ -157,6 +157,7 @@ public class PetasosActivity extends Activity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         Toast.makeText(PetasosActivity.this, "Visit www.emekaegwim.com", Toast.LENGTH_LONG).show();
+                        PetasosDetailsIntent();
                     }
                 });
         alertDialog.show();
@@ -177,6 +178,16 @@ public class PetasosActivity extends Activity {
         finish();
         clearCache();
     }
+
+
+    public void PetasosDetailsIntent(){
+
+
+        Intent PetasosDetailsIntent = new Intent(this, PetasosDetailActivity.class);
+        startActivity(PetasosDetailsIntent);
+
+    }
+
 
 
 

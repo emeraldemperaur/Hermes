@@ -49,7 +49,7 @@
     <string name="VoiceEnabled">VOICE ENABLED</string>
     <string name="VTCText">A VIRTUAL TRAVEL GUIDE</string>
     <string name="VTCTextB">A Virtual Travel Cicerone</string>
-    <string name="HermesLine1">My Cognomen is Hermes</string>
+    <string name="HermesLine1">My Pseudonym is Hermes</string>
     <string name="HermesLine2A">Where would you like to go?</string>
     <string name="HermesLine2B">Where we going to next?</string>
     <string name="HermesLine2C">Whats our heading Captain?</string>
@@ -74,6 +74,12 @@
     <string name="more_btn">More</string>
     <string name="sample_title">Transcorp Hilton</string>
     <string name="NQText">Would you like to query a new destination?</string>
-
+    <string name="synopsis">ABOUT</string>
+    <string name="contact_information">CONTACT INFORMATION</string>
+    <string name="email_ph">email@domain.com</string>
+    <string name="telephone_ph">+1(905)515&#8211;0515</string>
+    <string name="website_ph">www.domain.com</string>
+    <string name="synopsis_text">Hermes is a simple destination information demo application built for the Android mobile operating system to proffer end-users with supposedly relevant locale data like Local Time, Weather, Currency, ITU Country Code and other trivial traveller insights.</string>
+    <string name="googlesignin_loading">Authenticating&#8230;</string>
 
 </resources>
