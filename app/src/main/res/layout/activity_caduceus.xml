@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="iot.empiaurhouse.hermes.WelcomeActivity"
+    tools:context="iot.empiaurhouse.hermes.Views.WelcomeActivity"
     android:id="@+id/welcome_activity"
     android:focusableInTouchMode="true"
     android:orientation="vertical">
@@ -60,7 +60,7 @@
             android:visibility="visible" />
 
 
-        <iot.empiaurhouse.hermes.TypeWriterTextView
+        <iot.empiaurhouse.hermes.Utils.TypeWriterTextView
             android:id="@+id/hermers_speech_sim"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,6 +127,7 @@
 
 
     <SearchView
+        android:visibility="visible"
         android:id="@+id/HermesSearch"
         android:background="@drawable/buttonborder"
         android:textColorHint="@color/colorPrimary"
@@ -139,6 +140,18 @@
         android:iconifiedByDefault="false"
         android:inputType="text"
         android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:background="@drawable/buttonborder"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/HermesSearchList"
+
+        />
 
     <View
         android:visibility="visible"

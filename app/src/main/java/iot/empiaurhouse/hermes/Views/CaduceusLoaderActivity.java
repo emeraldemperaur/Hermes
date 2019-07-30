@@ -1,4 +1,4 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Views;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,6 +18,9 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+
+import iot.empiaurhouse.hermes.R;
+import iot.empiaurhouse.hermes.Utils.TypeWriterTextView;
 
 
 public class CaduceusLoaderActivity extends Activity {
@@ -91,7 +94,7 @@ public class CaduceusLoaderActivity extends Activity {
 
         AdRequest Hermes_adRequest = new AdRequest.Builder().build();
         Hermesinterstitial = new InterstitialAd(CaduceusLoaderActivity.this);
-        Hermesinterstitial.setAdUnitId(getString(R.string.test_interstitial_ad_unit_id));
+        Hermesinterstitial.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
         Hermesinterstitial.loadAd(Hermes_adRequest);
 
         Hermesinterstitial.setAdListener(new AdListener() {

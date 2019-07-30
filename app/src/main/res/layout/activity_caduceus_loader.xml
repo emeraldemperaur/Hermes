@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/hermes_introbckgrnd"
     android:fitsSystemWindows="true"
-    tools:context=".CaduceusLoaderActivity">
+    tools:context=".Views.CaduceusLoaderActivity">
 
 
     <ImageView
@@ -38,7 +38,7 @@
 
 
 
-    <iot.empiaurhouse.hermes.TypeWriterTextView
+    <iot.empiaurhouse.hermes.Utils.TypeWriterTextView
         android:id="@+id/query_progress_text"
         android:fontFamily="@font/montserratregular"
         android:layout_gravity="center"

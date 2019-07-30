@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="iot.empiaurhouse.hermes.PetasosActivity"
+    tools:context="iot.empiaurhouse.hermes.Views.PetasosActivity"
     android:id="@+id/petasos_activity"
     android:focusableInTouchMode="true"
     android:orientation="vertical">
@@ -43,11 +43,12 @@
 
 
     <ImageView
-            android:background="@drawable/florencedome"
-            android:id="@+id/banner_img"
+            android:background="@drawable/earth_ph"
+            android:id="@+id/destination_banner_img"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_gravity="center"
+            android:scaleType="fitXY"
             android:visibility="visible"
             android:contentDescription="@string/bwlogo_txt" />
 
@@ -59,7 +60,7 @@
         android:layout_marginBottom="0dp"
         android:layout_gravity="center"
         android:textSize="19sp"
-        android:text="@string/localtime_label"
+        android:text=""
         android:textColor="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -71,7 +72,7 @@
         android:layout_marginBottom="9dp"
         android:layout_gravity="center"
         android:textSize="19sp"
-        android:text="@string/localweather_label"
+        android:text=""
         android:textColor="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -105,6 +106,7 @@
             android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/divider_label"
         android:fontFamily="@font/thasadithregular"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
@@ -154,7 +156,23 @@
             android:layout_marginTop="11dp"
             android:layout_marginBottom="6dp"
             android:scrollbars="none"
+
             />
+
+
+        <TextView
+            android:id="@+id/petasos_error_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="69dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="@string/error_ph2"
+            android:textColor="@color/colorPrimary"
+            android:textSize="21sp" />
+
 
 
 

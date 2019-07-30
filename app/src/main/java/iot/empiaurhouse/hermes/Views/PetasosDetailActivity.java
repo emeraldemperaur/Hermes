@@ -1,8 +1,7 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Views;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -13,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
+import iot.empiaurhouse.hermes.R;
+import iot.empiaurhouse.hermes.Utils.TypeWriterTextView;
 
 public class PetasosDetailActivity extends Activity {
 

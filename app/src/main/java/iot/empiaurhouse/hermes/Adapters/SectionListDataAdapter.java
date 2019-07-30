@@ -1,7 +1,10 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Adapters;
 
 import android.content.Context;
 import androidx.recyclerview.widget.RecyclerView;
+import iot.empiaurhouse.hermes.R;
+import iot.empiaurhouse.hermes.Model.SingleItemModel;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

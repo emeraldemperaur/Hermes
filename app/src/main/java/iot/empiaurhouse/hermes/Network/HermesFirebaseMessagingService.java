@@ -1,6 +1,5 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Network;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -15,7 +14,8 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
+import iot.empiaurhouse.hermes.Views.CaduceusActivity;
+import iot.empiaurhouse.hermes.R;
 
 public class HermesFirebaseMessagingService extends FirebaseMessagingService {
 

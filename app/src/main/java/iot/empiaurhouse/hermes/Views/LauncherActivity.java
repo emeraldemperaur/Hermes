@@ -1,4 +1,4 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Views;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.core.content.ContextCompat;
+import iot.empiaurhouse.hermes.R;
 
 public class LauncherActivity extends Activity {
 

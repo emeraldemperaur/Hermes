@@ -1,6 +1,8 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Model;
 
 import java.util.ArrayList;
+
+import iot.empiaurhouse.hermes.Model.SingleItemModel;
 
 public class SectionDataModel {
 

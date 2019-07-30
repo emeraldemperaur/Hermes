@@ -1,4 +1,4 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Views;
 
 import android.app.Activity;
 import android.app.SearchManager;
@@ -15,19 +15,44 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
 import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 import androidx.core.content.ContextCompat;
+import iot.empiaurhouse.hermes.R;
+import iot.empiaurhouse.hermes.Utils.TypeWriterTextView;
 
 public class CaduceusActivity extends Activity {
+
+    Spinner destinationspinner;
 
     TextView UserName;
     TextView Salutation;
     TextView HermesSpeechSubText;
     Integer Greeting;
+
+    String Petasos_URL="http://petasosapi.herokuapp.com/destinationnames";
+    ArrayList<String> DestinationNames;
+
+
 
 
     @Override
@@ -48,7 +73,6 @@ public class CaduceusActivity extends Activity {
         String User_Name = HermesIO.getString("DisplayName", "Full Name");
         UserName.setText(User_Name);
         final Animation LoadFadeIn = AnimationUtils.loadAnimation(this, R.anim.fadein);
-
 
 
 
@@ -108,11 +132,45 @@ public class CaduceusActivity extends Activity {
 
 
 
+    private void loadSpinnerData(String url) {
+        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
+        StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonObject=new JSONObject(response);
+
+                        JSONArray jsonArray = jsonObject.getJSONArray("destinationnames");
+                        for(int i=0;i<jsonArray.length();i++){
+                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                            String petasos_destination = jsonObject1.getString("name");
+                            DestinationNames.add(petasos_destination);
+
+                        }
+                     DestinationNames.add("Select your destination");
+                    destinationspinner.setAdapter(new ArrayAdapter<String>(CaduceusActivity.this, android.R.layout.simple_spinner_dropdown_item, DestinationNames));
+                }catch (JSONException e){e.printStackTrace();}
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+        int socketTimeout = 30000;
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(policy);
+        requestQueue.add(stringRequest);
+    }
+
+
+
 
     public void HermesQueryInit(){
         Intent intent = getIntent();
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String caduceus_query = intent.getStringExtra(SearchManager.QUERY);
+            String caduceus_query = intent.getStringExtra(SearchManager.QUERY).toLowerCase();
+            caduceus_query = caduceus_query.substring(0,1).toUpperCase() + caduceus_query.substring(1).toLowerCase();
             SharedPreferences HermesIO = getApplicationContext().getSharedPreferences("HERMES_PREFERENCES",0);
             SharedPreferences.Editor HermesIOeditor = HermesIO.edit();
             HermesIOeditor.putString("HermesQuery", caduceus_query);

@@ -1,4 +1,4 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Views;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,6 +14,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 import androidx.core.app.ActivityCompat;
+import iot.empiaurhouse.hermes.R;
+import iot.empiaurhouse.hermes.Views.SignInActivity;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.READ_PHONE_STATE;

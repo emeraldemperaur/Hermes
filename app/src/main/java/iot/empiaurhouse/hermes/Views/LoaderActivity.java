@@ -1,4 +1,4 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Views;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,15 +6,14 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
+import iot.empiaurhouse.hermes.R;
+import iot.empiaurhouse.hermes.Utils.TypeWriterTextView;
 
 public class LoaderActivity extends Activity {
 

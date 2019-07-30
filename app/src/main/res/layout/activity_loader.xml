@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/hermes_introbckgrnd"
     android:layout_height="match_parent"
-    tools:context="iot.empiaurhouse.hermes.LauncherActivity"
+    tools:context="iot.empiaurhouse.hermes.Views.LauncherActivity"
     android:id="@+id/launcher_activity"
     android:paddingBottom="44dp"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -47,7 +47,7 @@
 
 
 
-    <iot.empiaurhouse.hermes.TypeWriterTextView
+    <iot.empiaurhouse.hermes.Utils.TypeWriterTextView
         android:id="@+id/title_subtext"
         android:fontFamily="@font/montserratmedium"
         android:layout_gravity="center"

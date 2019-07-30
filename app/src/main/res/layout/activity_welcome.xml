@@ -8,7 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="iot.empiaurhouse.hermes.WelcomeActivity"
+    tools:context="iot.empiaurhouse.hermes.Views.WelcomeActivity"
     android:id="@+id/welcome_activity"
     android:orientation="vertical">
 

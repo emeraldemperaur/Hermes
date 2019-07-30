@@ -31,7 +31,7 @@
 
 
         <activity
-            android:name=".LauncherActivity"
+            android:name=".Views.LauncherActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".Views.WelcomeActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -49,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoaderActivity"
+            android:name=".Views.LoaderActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -58,7 +58,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignInActivity"
+            android:name=".Views.SignInActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -88,7 +88,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CaduceusActivity"
+            android:name=".Views.CaduceusActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CaduceusTheme">
             <intent-filter>
@@ -104,7 +104,7 @@
                 android:value=".CaduceusLoaderActivity" />
         </activity>
         <activity
-            android:name=".CaduceusLoaderActivity"
+            android:name=".Views.CaduceusLoaderActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CaduceusLoaderTheme">
             <intent-filter>
@@ -114,7 +114,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PetasosActivity"
+            android:name=".Views.PetasosActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -123,7 +123,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".PetasosDetailActivity"
+        <activity android:name=".Views.PetasosDetailActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -134,7 +134,7 @@
         </activity>
 
 
-        <service android:name=".HermesFirebaseMessagingService">
+        <service android:name=".Network.HermesFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

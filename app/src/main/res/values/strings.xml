@@ -81,5 +81,13 @@
     <string name="website_ph">www.domain.com</string>
     <string name="synopsis_text">Hermes is a simple destination information demo application built for the Android mobile operating system to proffer end-users with supposedly relevant locale data like Local Time, Weather, Currency, ITU Country Code and other trivial traveller insights.</string>
     <string name="googlesignin_loading">Authenticating&#8230;</string>
+    <string name="time_ph">Local Time:\u00A0</string>
+    <string name="currency_ph">Local Currency:\u00A0</string>
+    <string name="climate_ph">Climate:\u00A0</string>
+    <string name="itu_ph">ITU Country Code:\u00A0</string>
+    <string name="error_ph">No Results Found</string>
+    <string name="error_ph2">Sorry, try another destination</string>
+    <string name="JSONloader_text">Loading JSON&#8230;</string>
+
 
 </resources>

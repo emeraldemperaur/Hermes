@@ -1,8 +1,7 @@
-package iot.empiaurhouse.hermes;
+package iot.empiaurhouse.hermes.Views;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
@@ -23,7 +22,6 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
-import com.facebook.login.LoginManager;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -50,6 +48,7 @@ import java.util.regex.Pattern;
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.content.ContextCompat;
+import iot.empiaurhouse.hermes.R;
 
 import static com.facebook.GraphRequest.TAG;
 
@@ -104,6 +103,8 @@ public class SignInActivity extends Activity implements
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "facebook:onSuccess:" + loginResult);
                 handleFacebookAccessToken(loginResult.getAccessToken());
+                //CaduceusIntent();
+
             }
 
             @Override
@@ -431,6 +432,13 @@ public class SignInActivity extends Activity implements
         super.onStop();
         hideProgressDialog();
     }
+
+
+
+
+
+
+
 
 
 
