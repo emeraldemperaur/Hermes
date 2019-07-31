@@ -8,7 +8,7 @@
 
 **Portfolio URL >_** https://www.emekaegwim.com/portfolios/hermes/
 
-**Petasos API >_** https://www.emekaegwim.com/petasosapi/petasos.html 
+**Petasos API Documentation >_** https://www.emekaegwim.com/petasosapi/petasos.html 
 
 **Google Play Store >_**
 
