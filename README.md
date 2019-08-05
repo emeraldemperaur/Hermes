@@ -10,7 +10,7 @@
 
 **Petasos API Documentation >_** https://www.emekaegwim.com/petasosapi/petasos.html 
 
-**Google Play Store >_**
+**Google Play Store >_** https://play.google.com/store/apps/details?id=iot.empiaurhouse.hermes
 
 &nbsp;
 
