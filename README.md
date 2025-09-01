@@ -4,14 +4,6 @@
 
 **Built using:** Adobe Photoshop + Illustrator, Java, Android Jetpack, Android X, AdMob, Volley, Content Provider, Flask-RESTful API, Firebase and the Material Design support library.</p>
 
-### Related Links
-
-**Portfolio URL >_** https://www.emekaegwim.com/portfolios/hermes/
-
-**Petasos API Documentation >_** https://www.emekaegwim.com/petasosapi/petasos.html 
-
-**Google Play Store >_** https://play.google.com/store/apps/details?id=iot.empiaurhouse.hermes
-
 &nbsp;
 
 ![alt text](hermes_featuregraphic.png)
